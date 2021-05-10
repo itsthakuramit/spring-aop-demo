@@ -29,11 +29,11 @@ public class PlayerService{
 		return playerRepository.getAllPlayers();
 	}
 	
-	public Player deletePlayer(String playerid) {
+	public Player deletePlayer(long playerid) {
 		return playerRepository.deletePlayer(playerid);
 	}
 	
-	public Player getPlayerById(String playerid) {
+	public Player getPlayerById(long playerid) {
 		return playerRepository.getPlayerById(playerid);
 	}
 	

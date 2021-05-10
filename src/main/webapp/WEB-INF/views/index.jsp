@@ -13,10 +13,7 @@
 <h1>Add Player</h1>
 <form action="addPlayer" method="post">
    <table style="with: 50%" border="2">
-    <tr>
-     <td>Player Id</td>
-     <td><input type="text" name="playerid" /></td>
-    </tr>
+  
     <tr>
      <td>Player Name</td>
      <td><input type="text" name="playername" /></td>

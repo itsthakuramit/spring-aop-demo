@@ -35,7 +35,6 @@ public class PlayerController {
 	public String addPlayer(Model model, HttpServletRequest req, HttpServletResponse res) {
 	
 		Player newPlayer = new Player();
-		newPlayer.setPlayerid(req.getParameter("playerid"));
 		newPlayer.setPlayername(req.getParameter("playername"));
 		newPlayer.setCountry(req.getParameter("country"));
 		newPlayer.setSports(req.getParameter("sports"));
@@ -48,13 +47,13 @@ public class PlayerController {
 	@RequestMapping(value = "/deletePlayer", method = RequestMethod.GET)
 	public String deletePlayer(@RequestParam String playerid) {
 
-		playerService.deletePlayer(playerid);
+		playerService.deletePlayer(Integer.parseInt(playerid));
 		return "redirect:/";
 	}
 
 	@RequestMapping(value = "/getPlayer/{playerid}", method = RequestMethod.GET)
 	public String getPlayerInfo(Model model, @PathVariable("playerid") String playerid) {
-		Player player = playerService.getPlayerById(playerid);
+		Player player = playerService.getPlayerById(Integer.parseInt(playerid));
 		model.addAttribute("playerid", player.getPlayerid());
 		model.addAttribute("playername", player.getPlayername());
 		model.addAttribute("country", player.getCountry());

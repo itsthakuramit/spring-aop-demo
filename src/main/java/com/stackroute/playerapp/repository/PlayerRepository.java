@@ -35,7 +35,7 @@ public class PlayerRepository {
 		return getCurrentSession().createQuery("from Player").getResultList();
 	}
 	
-	public Player deletePlayer(String playerid) {
+	public Player deletePlayer(long playerid) {
 		Player player = getCurrentSession().find(Player.class,playerid);
 		getCurrentSession().remove(player);
 		return player;
@@ -46,7 +46,7 @@ public class PlayerRepository {
 		return null;
 	}
 
-	public Player getPlayerById(String playerid) {
+	public Player getPlayerById(long playerid) {
 		return getCurrentSession().find(Player.class,playerid);
 	}
 	
