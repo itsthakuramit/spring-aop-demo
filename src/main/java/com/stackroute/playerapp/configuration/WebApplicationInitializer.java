@@ -11,7 +11,7 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] {WebMVCConfig.class};
+		return new Class[] {};
 	}
 
 	@Override

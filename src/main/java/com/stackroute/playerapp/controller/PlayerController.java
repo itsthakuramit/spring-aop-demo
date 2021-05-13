@@ -33,6 +33,11 @@ public class PlayerController {
 	@Autowired
 	PlayerService playerService;
 
+	@GetMapping("/")
+	public String homepage() {
+		return "Welcome to REST API";
+	}
+	
 	@GetMapping("/getAllPlayers")
 	public ResponseEntity<?> getAllPlayers(HttpSession httpSession) {
 		ResponseEntity<?> response = null;
